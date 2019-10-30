@@ -1,0 +1,29 @@
+port: 7890
+socks-port: 7891
+redir-port: 0
+allow-lan: false
+mode: Rule
+log-level: info
+external-controller: '0.0.0.0:9090'
+secret: ''
+Proxy:
+- { name: "日本 F",type: vmess,server: hb-cu.jysu.xyz,port: 80,uuid: 228170D5-595F-8DED-1002-948DF48A6423,alterId: 0,cipher: auto, network: ws, ws-headers: { Host: lf.caipin.pro }}
+- { name: "JIYOU-F-HKT-A",type: vmess,server: gz-cu.jysu.xyz,port: 8080,uuid: 228170D5-595F-8DED-1002-948DF48A6423,alterId: 0,cipher: auto, network: ws, ws-headers: { Host: itunes.apple.com.ajax.microsoft.com.www.bing.com.hkt09.caipin.pro }}
+- { name: "JIYOU-F-HKT-B",type: vmess,server: gz-cm.jysu.xyz,port: 8080,uuid: 228170D5-595F-8DED-1002-948DF48A6423,alterId: 0,cipher: auto, network: ws, ws-headers: { Host: itunes.apple.com.ajax.microsoft.com.www.bing.com.hkt09.caipin.pro }}
+- { name: "JIYOU-F-HKT-C",type: vmess,server: gz-cu.jysu.xyz,port: 8080,uuid: 228170D5-595F-8DED-1002-948DF48A6423,alterId: 0,cipher: auto, network: ws, ws-headers: { Host: itunes.apple.com.ajax.microsoft.com.www.bing.com.hktf.caipin.pro }}
+- { name: "JIYOU-F-HKT-D",type: vmess,server: gz-cm.jysu.xyz,port: 8080,uuid: 228170D5-595F-8DED-1002-948DF48A6423,alterId: 0,cipher: auto, network: ws, ws-headers: { Host: itunes.apple.com.ajax.microsoft.com.www.bing.com.hktf.caipin.pro }}
+- { name: "JIYOU-F-CMHK-A",type: vmess,server: gz-cu.jysu.xyz,port: 8080,uuid: 228170D5-595F-8DED-1002-948DF48A6423,alterId: 0,cipher: auto, network: ws, ws-headers: { Host: itunes.apple.com.ajax.microsoft.com.www.bing.com.cmhk04.caipin.pro }}
+- { name: "JIYOU-F-CMHK-B",type: vmess,server: gz-cm.jysu.xyz,port: 8080,uuid: 228170D5-595F-8DED-1002-948DF48A6423,alterId: 0,cipher: auto, network: ws, ws-headers: { Host: itunes.apple.com.ajax.microsoft.com.www.bing.com.cmhk04.caipin.pro }}
+
+Proxy Group:
+- { name: Pro F, type: select, proxies: ["日本 F", "JIYOU-F-HKT-A", "JIYOU-F-HKT-B", "JIYOU-F-HKT-C", "JIYOU-F-HKT-D", "JIYOU-F-CMHK-A", "JIYOU-F-CMHK-B"]}
+#- { name: auto, type: url-test, proxies: ["日本 F", "JIYOU-F-HKT-A", "JIYOU-F-HKT-B", "JIYOU-F-HKT-C", "JIYOU-F-HKT-D", "JIYOU-F-CMHK-A", "JIYOU-F-CMHK-B"], url: http://www.gstatic.com/generate_204, interval: 300 }
+#- { name: fallback, type: fallback, proxies: ["日本 F", "JIYOU-F-HKT-A", "JIYOU-F-HKT-B", "JIYOU-F-HKT-C", "JIYOU-F-HKT-D", "JIYOU-F-CMHK-A", "JIYOU-F-CMHK-B"], url: http://www.gstatic.com/generate_204, interval: 300 }
+Rule:
+- DOMAIN-SUFFIX,google.com,Pro F
+- DOMAIN-KEYWORD,google,Pro F
+- DOMAIN,google.com,Pro F
+- DOMAIN-SUFFIX,ad.com,REJECT
+- IP-CIDR,127.0.0.0/8,DIRECT
+- GEOIP,CN,DIRECT
+- MATCH,Pro F
