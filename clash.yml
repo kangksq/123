@@ -1,29 +1,161 @@
 port: 7890
 socks-port: 7891
-redir-port: 0
+redir-port: 7892
 allow-lan: false
 mode: Rule
 log-level: info
-external-controller: '0.0.0.0:9090'
-secret: ''
+external-controller: 0.0.0.0:9090
+secret: ""
 Proxy:
-- { name: "日本 F",type: vmess,server: hb-cu.jysu.xyz,port: 80,uuid: 228170D5-595F-8DED-1002-948DF48A6423,alterId: 0,cipher: auto, network: ws, ws-headers: { Host: lf.caipin.pro }}
-- { name: "JIYOU-F-HKT-A",type: vmess,server: gz-cu.jysu.xyz,port: 8080,uuid: 228170D5-595F-8DED-1002-948DF48A6423,alterId: 0,cipher: auto, network: ws, ws-headers: { Host: itunes.apple.com.ajax.microsoft.com.www.bing.com.hkt09.caipin.pro }}
-- { name: "JIYOU-F-HKT-B",type: vmess,server: gz-cm.jysu.xyz,port: 8080,uuid: 228170D5-595F-8DED-1002-948DF48A6423,alterId: 0,cipher: auto, network: ws, ws-headers: { Host: itunes.apple.com.ajax.microsoft.com.www.bing.com.hkt09.caipin.pro }}
-- { name: "JIYOU-F-HKT-C",type: vmess,server: gz-cu.jysu.xyz,port: 8080,uuid: 228170D5-595F-8DED-1002-948DF48A6423,alterId: 0,cipher: auto, network: ws, ws-headers: { Host: itunes.apple.com.ajax.microsoft.com.www.bing.com.hktf.caipin.pro }}
-- { name: "JIYOU-F-HKT-D",type: vmess,server: gz-cm.jysu.xyz,port: 8080,uuid: 228170D5-595F-8DED-1002-948DF48A6423,alterId: 0,cipher: auto, network: ws, ws-headers: { Host: itunes.apple.com.ajax.microsoft.com.www.bing.com.hktf.caipin.pro }}
-- { name: "JIYOU-F-CMHK-A",type: vmess,server: gz-cu.jysu.xyz,port: 8080,uuid: 228170D5-595F-8DED-1002-948DF48A6423,alterId: 0,cipher: auto, network: ws, ws-headers: { Host: itunes.apple.com.ajax.microsoft.com.www.bing.com.cmhk04.caipin.pro }}
-- { name: "JIYOU-F-CMHK-B",type: vmess,server: gz-cm.jysu.xyz,port: 8080,uuid: 228170D5-595F-8DED-1002-948DF48A6423,alterId: 0,cipher: auto, network: ws, ws-headers: { Host: itunes.apple.com.ajax.microsoft.com.www.bing.com.cmhk04.caipin.pro }}
-
+  - name: "A.香港.推荐线路.30M.倍率1 #71"
+    type: vmess
+    server: n71.xyw.link
+    port: 443
+    uuid: 7b20d44a-4440-acd2-0012-2a92907e5d3d
+    alterId: 2
+    cipher: auto
+    network: ws
+    ws-path: /go
+    tls: true
+  - name: "A.香港.稳定线路.30M.倍率1 #53"
+    type: vmess
+    server: n53.xyw.link
+    port: 443
+    uuid: 7b20d44a-4440-acd2-0012-2a92907e5d3d
+    alterId: 2
+    cipher: auto
+    network: ws
+    ws-path: /go
+    tls: true
+  - name: "A.香港.稳定线路.30M.倍率1 #10"
+    type: vmess
+    server: n10.xyw.link
+    port: 443
+    uuid: 7b20d44a-4440-acd2-0012-2a92907e5d3d
+    alterId: 2
+    cipher: auto
+    network: ws
+    ws-path: /go
+    tls: true
+  - name: "D.香港.动态线路.500M.倍率1 #65"
+    type: vmess
+    server: n65.xyw.link
+    port: 54301
+    uuid: 7b20d44a-4440-acd2-0012-2a92907e5d3d
+    alterId: 2
+    cipher: auto
+  - name: "D.香港.动态线路.500M.倍率1 #68"
+    type: vmess
+    server: n68.xyw.link
+    port: 543
+    uuid: 7b20d44a-4440-acd2-0012-2a92907e5d3d
+    alterId: 2
+    cipher: auto
+  - name: "P.香港.高级线路.500M.倍率5 #58"
+    type: vmess
+    server: n58.xyw.link
+    port: 443
+    uuid: 7b20d44a-4440-acd2-0012-2a92907e5d3d
+    alterId: 2
+    cipher: auto
+    network: ws
+    ws-path: /go
+    tls: true
+  - name: "P.香港.高级线路.500M.倍率5 #15"
+    type: vmess
+    server: n15.xyw.link
+    port: 443
+    uuid: 7b20d44a-4440-acd2-0012-2a92907e5d3d
+    alterId: 2
+    cipher: auto
+    network: ws
+    ws-path: /go
+    tls: true
+  - name: "S.日本.主力线路.200M.倍率1 #69"
+    type: vmess
+    server: n69.xyw.link
+    port: 443
+    uuid: 7b20d44a-4440-acd2-0012-2a92907e5d3d
+    alterId: 2
+    cipher: auto
+    network: ws
+    ws-path: /go
+    tls: true
+  - name: "S.日本.主力线路.200M.倍率1 #35"
+    type: vmess
+    server: n35.xyw.link
+    port: 443
+    uuid: 7b20d44a-4440-acd2-0012-2a92907e5d3d
+    alterId: 2
+    cipher: auto
+    network: ws
+    ws-path: /go
+    tls: true
+  - name: "S.日本.主力线路.200M.倍率1 #2"
+    type: vmess
+    server: n2.xyw.link
+    port: 443
+    uuid: 7b20d44a-4440-acd2-0012-2a92907e5d3d
+    alterId: 2
+    cipher: auto
+    network: ws
+    ws-path: /go
+    tls: true
+  - name: "S.洛杉矶.标准线路.1000M.倍率1 #20"
+    type: vmess
+    server: n20.xyw.link
+    port: 443
+    uuid: 7b20d44a-4440-acd2-0012-2a92907e5d3d
+    alterId: 2
+    cipher: auto
+    network: ws
+    ws-path: /go
+    tls: true
+  - name: "S.洛杉矶.标准线路.1000M.倍率1 #22"
+    type: vmess
+    server: n22.xyw.link
+    port: 443
+    uuid: 7b20d44a-4440-acd2-0012-2a92907e5d3d
+    alterId: 2
+    cipher: auto
+    network: ws
+    ws-path: /go
+    tls: true
+  - name: "V.圣何塞.视频线路.1000M.倍率1 #47"
+    type: vmess
+    server: n47.xyw.link
+    port: 543
+    uuid: 7b20d44a-4440-acd2-0012-2a92907e5d3d
+    alterId: 2
+    cipher: auto
+  - name: "V.圣何塞.视频线路.1000M.倍率1 #39"
+    type: vmess
+    server: n39.xyw.link
+    port: 543
+    uuid: 7b20d44a-4440-acd2-0012-2a92907e5d3d
+    alterId: 2
+    cipher: auto
 Proxy Group:
-#- { name: Pro F, type: select, proxies: ["日本 F", "JIYOU-F-HKT-A", "JIYOU-F-HKT-B", "JIYOU-F-HKT-C", "JIYOU-F-HKT-D", "JIYOU-F-CMHK-A", "JIYOU-F-CMHK-B"]}
-#- { name: auto, type: url-test, proxies: ["日本 F", "JIYOU-F-HKT-A", "JIYOU-F-HKT-B", "JIYOU-F-HKT-C", "JIYOU-F-HKT-D", "JIYOU-F-CMHK-A", "JIYOU-F-CMHK-B"], url: http://www.gstatic.com/generate_204, interval: 300 }
-#- { name: fallback, type: fallback, proxies: ["日本 F", "JIYOU-F-HKT-A", "JIYOU-F-HKT-B", "JIYOU-F-HKT-C", "JIYOU-F-HKT-D", "JIYOU-F-CMHK-A", "JIYOU-F-CMHK-B"], url: http://www.gstatic.com/generate_204, interval: 300 }
+  - name: Proxy
+    type: select
+    proxies:
+      - "A.香港.推荐线路.30M.倍率1 #71"
+      - "A.香港.稳定线路.30M.倍率1 #53"
+      - "A.香港.稳定线路.30M.倍率1 #10"
+      - "D.香港.动态线路.500M.倍率1 #65"
+      - "D.香港.动态线路.500M.倍率1 #68"
+      - "P.香港.高级线路.500M.倍率5 #58"
+      - "P.香港.高级线路.500M.倍率5 #15"
+      - "S.日本.主力线路.200M.倍率1 #69"
+      - "S.日本.主力线路.200M.倍率1 #35"
+      - "S.日本.主力线路.200M.倍率1 #2"
+      - "S.洛杉矶.标准线路.1000M.倍率1 #20"
+      - "S.洛杉矶.标准线路.1000M.倍率1 #22"
+      - "V.圣何塞.视频线路.1000M.倍率1 #47"
+      - "V.圣何塞.视频线路.1000M.倍率1 #39"
 Rule:
-- DOMAIN-SUFFIX,google.com,Pro F
-- DOMAIN-KEYWORD,google,Pro F
-- DOMAIN,google.com,Pro F
-- DOMAIN-SUFFIX,ad.com,REJECT
-- IP-CIDR,127.0.0.0/8,DIRECT
-- GEOIP,CN,DIRECT
-- MATCH,Pro F
+  - DOMAIN-SUFFIX,google.com,Proxy
+  - DOMAIN-KEYWORD,google,Proxy
+  - DOMAIN-SUFFIX,ad.com,REJECT
+  - GEOIP,CN,DIRECT
+  - FINAL,,Proxy
